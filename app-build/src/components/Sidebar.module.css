@@ -1,0 +1,237 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: width var(--duration-base) var(--ease-out);
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: var(--sp-5) var(--sp-5);
+    border-bottom: 1px solid var(--border-subtle);
+    min-height: 68px;
+}
+
+.logoIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--r-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logoTitle {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.logoSub {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* Navigation */
+.nav {
+    flex: 1;
+    padding: var(--sp-3);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    overflow-y: auto;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: 9px 12px;
+    border-radius: var(--r-md);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all var(--duration-fast) var(--ease-out);
+    position: relative;
+    white-space: nowrap;
+}
+
+.navItem:hover {
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.navItem.active {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navIcon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.navLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activeIndicator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 16px;
+    background: var(--brand);
+    border-radius: 0 2px 2px 0;
+}
+
+.alertBadge {
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    color: white;
+    font-size: 0.58rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Status Card */
+.statusCard {
+    margin: var(--sp-3);
+    padding: var(--sp-3);
+    background: var(--accent-green-muted);
+    border: 1px solid rgba(52, 211, 153, 0.12);
+    border-radius: var(--r-md);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+}
+
+.statusDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    flex-shrink: 0;
+    animation: pulse-green 2.5s ease-in-out infinite;
+}
+
+.statusTitle {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.statusDesc {
+    font-size: 0.63rem;
+    color: var(--text-muted);
+}
+
+/* Collapse Button */
+.collapseBtn {
+    padding: var(--sp-3);
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration-fast);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.collapseBtn:hover {
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Mobile */
+.mobileToggle {
+    display: none;
+    position: fixed;
+    top: var(--sp-4);
+    left: var(--sp-4);
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--r-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: var(--sidebar-width) !important;
+    }
+
+    .sidebar.mobileOpen {
+        transform: translateX(0);
+    }
+
+    .mobileToggle {
+        display: flex;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    .collapseBtn {
+        display: none;
+    }
+}

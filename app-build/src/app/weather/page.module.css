@@ -1,0 +1,134 @@
+.cityCard {
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.cityCard:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow-blue);
+}
+
+.cityCard.selected {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-glow-blue);
+}
+
+.cityHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cityName {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cityDesc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.cityIcon {
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.cityTemp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: var(--space-sm) 0;
+}
+
+.cityStats {
+    display: flex;
+    gap: var(--space-md);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Precipitation Chart */
+.precipChart {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 200px;
+    margin-top: var(--space-md);
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.precipBar {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.precipFill {
+    width: 100%;
+    max-width: 12px;
+    min-width: 3px;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.5s ease-out;
+    cursor: pointer;
+}
+
+.precipFill:hover {
+    opacity: 0.7;
+}
+
+.precipLabel {
+    position: absolute;
+    bottom: -20px;
+    font-size: 0.563rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* Detail Grid */
+.detailGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+}
+
+.detailIcon {
+    font-size: 1.25rem;
+}
+
+.detailLabel {
+    font-size: 0.688rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.detailValue {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.dataSource {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.688rem;
+    color: var(--text-muted);
+}

@@ -1,0 +1,82 @@
+.mapPage {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.mapLoading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    font-size: 1rem;
+    background: var(--bg-tertiary);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.layerButtons {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.legend {
+    display: flex;
+    gap: var(--space-md);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.infoPanel {
+    margin-top: var(--space-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    animation: slideInUp 0.4s ease-out;
+}
+
+.infoPanelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-lg);
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.infoValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 4px;
+}

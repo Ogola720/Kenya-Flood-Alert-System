@@ -1,0 +1,100 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.filterTabs {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.alertGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--space-md);
+}
+
+.alertCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.alertHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alertTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.alertMsg {
+    font-size: 0.813rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.alertMeta {
+    display: flex;
+    gap: var(--space-md);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.alertFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--border-subtle);
+    margin-top: var(--space-sm);
+}
+
+.alertTime {
+    font-size: 0.688rem;
+    color: var(--text-muted);
+}
+
+.channelCheckboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.channelCheck {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    font-size: 0.813rem;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.channelCheck:has(input:checked) {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue-light);
+}
+
+.channelCheck input {
+    accent-color: var(--accent-blue);
+}
+
+@media (max-width: 640px) {
+    .alertGrid {
+        grid-template-columns: 1fr;
+    }
+}

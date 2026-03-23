@@ -1,0 +1,148 @@
+.avoidInfo {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.floodZoneList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.floodZoneItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.floodZoneItem:last-child {
+    border-bottom: none;
+}
+
+.routeHeader {
+    margin-bottom: var(--space-md);
+}
+
+.routeStats {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.routeStat {
+    font-size: 0.813rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.routeDisplay {
+    padding: var(--space-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
+
+.routeEndpoints {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    position: relative;
+}
+
+.endpoint {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.endpointDot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.endpointLabel {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.endpointName {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.routeLine {
+    width: 2px;
+    height: 20px;
+    background: var(--border-light);
+    margin-left: 6px;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.instruction {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.instruction:last-child {
+    border-bottom: none;
+}
+
+.stepNum {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.688rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.stepInfo {
+    flex: 1;
+}
+
+.stepText {
+    font-size: 0.813rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.stepDist {
+    font-size: 0.688rem;
+    color: var(--text-muted);
+}
+
+.safetyNotes {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: var(--radius-md);
+}
+
+.safetyNote {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
